@@ -13,6 +13,41 @@
         <button type="submit">Send Email</button>
     </form>
 
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <!-- <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        const form = document.querySelector('#contact_form');
+        function sendMsg(e){
+            e.preventDefault();
+            const recipientEmail = document.querySelector('#email').value,
+                subject = document.querySelector('#name').value,
+                message = document.querySelector('#text').value;
+            Email.send({
+                SecureToken : "70e528ef-5200-415b-9157-038b63d79bd2",
+                To : recipientEmail,
+                From : "vayungupta0710@gmail.com", // Use a valid email address
+                Subject : subject,
+                Body : message
+            }).then(
+                response => {
+                    console.log("Response:", response);  // Log response for debugging
+                    alert("Email sent successfully!");  // Show a success message
+                }
+            ).catch(
+                error => {
+                    console.error("Error:", error);  // Log errors if any
+                    alert("Failed to send email.");  // Show an error message
+                }
+            );
+        }
+        form.addEventListener('submit', sendMsg);
+    </script> -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1JQG8H0TH7"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-1JQG8H0TH7');
+    </script>
+
 </body>
 </html>
